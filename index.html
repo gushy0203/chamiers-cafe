@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html id="top" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>European Fine Dining | Chamiers Cafe</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="canonical" href="">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="swipebox/swipebox.css">
+<script src="https://unpkg.com/jquery@latest/dist/jquery.min.js"></script>
+<script src="swipebox/swipebox.js"></script>
+<script src="js/videos.js"></script>
+<script>
+jQuery(document).ready(function($) {
+$(".swipebox").swipebox();
+$("#wrapper").vids();
+});
+</script>
+</head>
+<body id="home">
+<a href="#content" class="button skip-link visually-hidden">Skip to the content</a>
+<div id="wrapper" class="hfeed">
+<header id="header">
+<div id="site-title"><a href="./"><img src="images/logo.png" alt="Chamiers Cafe" id="logo"></a></div>
+<nav id="menu">
+<button type="button" class="menu-toggle"><span class="menu-icon">&#9776;</span><span class="menu-text visually-hidden"> Menu</span></button>
+<ul class="xoxo">
+<li id="up"><a href="./#top">&uarr;</a></li>
+<li><a href="./#about">About</a></li>
+<li><a href="./#pics">Photos</a></li>
+<li><a href="./#map">Map</a></li>
+<li class="mobile"><a href="tel:+91-44-42030734">+91-44-42030734</a></li>
+</ul>
+</nav>
+</header>
+<main id="content" class="hentry">
+<div id="inner-container">
+<article class="entry-content">
+<video playsinline autoplay muted loop poster="images/tour.jpg" id="bg-vid">
+<source src="tour.mp4" type="video/mp4">
+</video>
+<header id="hero">
+<h1 class="entry-title">Chamiers Cafe Chennai</h1>
+<p id="tagline">Make a reservation today!</p>
+<p><a href="tel:+91-44-42030734" class="button">+91-44-42030734</a></p>
+</header>
+<section id="inner-content">
+<div class="layer layer-0 layer-1 center">
+<div class="layer-inner">
+<h2 id="about" class="offset">About</h2>
+<p>Stylish, vintage-style cafe offering international dishes, salads & breakfast. <br />
+Vegetarian-Friendly Cafe</p>
+<p><strong>Hours</strong></p>
+<p>
+<strong>Sun</strong> 08:00 AM - 11:30 PM<br>
+<strong>Mon</strong> 08:00 AM - 11:30 PM<br>
+<strong>Tue</strong> 08:00 AM - 11:30 PM<br>
+<strong>Wed</strong> 08:00 AM - 11:30 PM<br>
+<strong>Thu</strong> 08:00 AM - 11:30 PM<br>
+<strong>Fri</strong> 08:00 AM - 11:30 PM<br>
+<strong>Sat</strong> 08:00 AM - 11:30 PM
+</p>
+</div>
+</div>
+<div class="layer layer-0 layer-2 black center">
+<div class="layer-inner">
+<h2 id="pics" class="offset">Pics</h2>
+<p>
+<a href="images/tour-1.jpg" class="swipebox"><img src="images/tour-1.jpg" alt="Tour"></a>
+<a href="images/tour-2.jpg" class="swipebox"><img src="images/tour-2.jpg" alt="Tour"></a>
+<a href="images/tour-3.jpg" class="swipebox"><img src="images/tour-3.jpg" alt="Tour"></a>
+<a href="images/tour-4.jpg" class="swipebox"><img src="images/tour-4.jpg" alt="Tour"></a>
+<a href="images/tour-5.jpg" class="swipebox"><img src="images/tour-5.jpg" alt="Tour"></a>
+<a href="images/tour-6.jpg" class="swipebox"><img src="images/tour-6.jpg" alt="Tour"></a>
+<a href="images/tour-7.jpg" class="swipebox"><img src="images/tour-7.jpg" alt="Tour"></a>
+<a href="images/tour-8.jpg" class="swipebox"><img src="images/tour-8.jpg" alt="Tour"></a>
+<a href="images/tour-9.jpg" class="swipebox"><img src="images/tour-9.jpg" alt="Tour"></a>
+<a href="images/tour-10.jpg" class="swipebox"><img src="images/tour-10.jpg" alt="Tour"></a>
+</p>
+</div>
+</div>
+<div class="layer layer-0 layer-3 center">
+<div class="layer-inner">
+<h2 id="map" class="offset">Map</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1148006138815!2d80.24762861017138!3d13.02836071357925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267b6c1e0226d%3A0xb8153273f7474fa!2s106%2C%20Chamiers%20Rd%2C%20RA%20Puram%2C%20Teynampet%2C%20Chennai%2C%20Tamil%20Nadu%20600018%2C%20India!5e0!3m2!1sen!2sus!4v1710982468542!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</section>
+</article>
+</div>
+</main>
+<footer id="footer">
+<div id="copyright">
+&copy; 2024 Chamiers Cafe
+</div>
+</footer>
+</div>
+<script>
+jQuery(document).ready(function($) {
+$(window).on("scroll", function() {
+if ($(window).scrollTop() > 90) {
+$("#header").addClass("moving");
+} else {
+$("#header").removeClass("moving");
+}
+});
+$(".menu-icon").on("click", function () {
+$("#menu").toggleClass("toggled");
+});
+$(".menu-toggle").on("keypress", function(e) {
+if (e.which == 13) {
+$("#menu").toggleClass("toggled");
+}
+});
+$("img.svg").each(function() {
+var $img = $(this);
+var imgURL = $img.attr("src");
+var attributes = $img.prop("attributes");
+$.get(imgURL, function (data) {
+var $svg = $(data).find("svg");
+$svg = $svg.removeAttr("xmlns:a");
+$.each(attributes, function () {
+$svg.attr(this.name, this.value);
+});
+$img.replaceWith($svg);
+}, "xml");
+});
+});
+</script>
+</body>
+</html>
